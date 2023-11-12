@@ -1,8 +1,8 @@
 locals {
-	asg_tags = merge(
-		var.tags,
-		{ "Name" = "${var.environment}-${var.application}-asg"  }
-	)
+  asg_tags = merge(
+    var.tags,
+    { "Name" = "${var.environment}-${var.application}-asg" }
+  )
 }
 
 resource "aws_iam_instance_profile" "instance_profile" {
@@ -59,10 +59,10 @@ resource "aws_autoscaling_group" "application_asg" {
 }
 
 resource "aws_autoscaling_policy" "cpu_scaling_policy" {
-  name                   = "${var.environment}-${var.application}-cpu-scaling-policy"
-  policy_type            = "TargetTrackingScaling"
+  name                      = "${var.environment}-${var.application}-cpu-scaling-policy"
+  policy_type               = "TargetTrackingScaling"
   estimated_instance_warmup = var.instance_warmup_time
-  autoscaling_group_name = aws_autoscaling_group.application_asg.name
+  autoscaling_group_name    = aws_autoscaling_group.application_asg.name
 
   target_tracking_configuration {
     predefined_metric_specification {

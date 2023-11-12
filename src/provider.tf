@@ -8,7 +8,7 @@ terraform {
   backend "s3" {
     bucket = "terraform-state"
     # key    = "dev/vpc.tfstate"
-    region         = "us-west-1"
+    region = "us-west-1"
   }
 }
 
