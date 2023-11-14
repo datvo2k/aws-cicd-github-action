@@ -74,7 +74,7 @@ listener_type                   = "forward"
 #launch_template
 ami_id                           = "ami-020f3ca563c92097b"
 instance_type                    = "t2.medium"
-key_name                         = "techiescamp"
+key_name                         = "brianvo"
 vpc_id                           = "vpc-0a5ca4a92c2e10163"
 asg_subnets                      = ["subnet-058a7514ba8adbb07", "subnet-0dbcd1ac168414927", "subnet-032f5077729435858"]
 public_access                    = true
